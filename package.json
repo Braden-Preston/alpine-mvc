@@ -4,15 +4,18 @@
   "main": "index.js",
   "license": "GPL-2.0-only",
   "scripts": {
-    "dev": "fastify start -w -l info -P app",
+    "dev": "run-p 'dev:*'",
+    "dev:server": "fastify start -w -l info -P build",
+    "dev:bundle": "esbuild app/index.js --bundle --platform=node --watch --outdir=build",
     "start": "fastify start -l info app"
   },
   "dependencies": {
     "fastify": "^3.22.0",
-    "fastify-cli": "^2.13.0",
     "fastify-static": "^4.4.2"
   },
   "devDependencies": {
-    "esbuild": "^0.13.7"
+    "esbuild": "^0.13.7",
+    "fastify-cli": "^2.13.0",
+    "npm-run-all": "^4.1.5"
   }
 }
