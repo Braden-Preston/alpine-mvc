@@ -123,7 +123,9 @@ __metadata:
     esbuild: ^0.13.7
     fastify: ^3.22.0
     fastify-cli: ^2.13.0
+    fastify-cors: ^6.0.2
     fastify-static: ^4.4.2
+    middie: ^5.3.0
     npm-run-all: ^4.1.5
   languageName: unknown
   linkType: soft
@@ -1079,6 +1081,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fastify-cors@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "fastify-cors@npm:6.0.2"
+  dependencies:
+    fastify-plugin: ^3.0.0
+    vary: ^1.1.2
+  checksum: f600eb30d2259bf0277c3df72c73f09f6891f3984c62e1c9a7489f0d6b2ffb1749dbe9a79a05ad74b08a660c1a707c9fb7636c20b87d07eae0e6efd9c951fd03
+  languageName: node
+  linkType: hard
+
 "fastify-error@npm:^0.3.0":
   version: 0.3.1
   resolution: "fastify-error@npm:0.3.1"
@@ -1907,6 +1919,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"middie@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "middie@npm:5.3.0"
+  dependencies:
+    fastify-plugin: ^3.0.0
+    path-to-regexp: ^6.1.0
+    reusify: ^1.0.4
+  checksum: 7afe2f75d372e6cbb84d9f5b77e4ea32faf6c51236b7c2440c88754e52c706bbef48addc3f94c4263d0d8d6b62f4d4951ba37d5e69668892906f7114b6f18eaf
+  languageName: node
+  linkType: hard
+
 "mime@npm:1.6.0":
   version: 1.6.0
   resolution: "mime@npm:1.6.0"
@@ -2328,6 +2351,13 @@ fsevents@~2.3.2:
   version: 1.0.7
   resolution: "path-parse@npm:1.0.7"
   checksum: 49abf3d81115642938a8700ec580da6e830dde670be21893c62f4e10bd7dd4c3742ddc603fe24f898cba7eb0c6bc1777f8d9ac14185d34540c6d4d80cd9cae8a
+  languageName: node
+  linkType: hard
+
+"path-to-regexp@npm:^6.1.0":
+  version: 6.2.0
+  resolution: "path-to-regexp@npm:6.2.0"
+  checksum: a6aca74d2d6e2e7594d812f653cf85e9cb5054d3a8d80f099722a44ef6ad22639b02078e5ea83d11db16321c3e4359e3f1ab0274fa78dad0754a6e53f630b0fc
   languageName: node
   linkType: hard
 
@@ -3190,6 +3220,13 @@ resolve@^1.10.0:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
+  languageName: node
+  linkType: hard
+
+"vary@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "vary@npm:1.1.2"
+  checksum: ae0123222c6df65b437669d63dfa8c36cee20a504101b2fcd97b8bf76f91259c17f9f2b4d70a1e3c6bbcee7f51b28392833adb6b2770b23b01abec84e369660b
   languageName: node
   linkType: hard
 
