@@ -5,16 +5,19 @@
   "license": "GPL-2.0-only",
   "scripts": {
     "dev": "run-p 'dev:*'",
-    "dev:server": "fastify start -w -l info -P build",
+    "dev:server": "fastify start -w --ignore-watch='src public' -l info -P build",
     "dev:bundle": "node scripts/build --watch",
     "start": "fastify start -l info app"
   },
   "dependencies": {
+    "connect-livereload": "^0.6.1",
     "cors": "^2.8.5",
     "fastify": "^3.22.0",
     "fastify-cors": "^6.0.2",
     "fastify-express": "^0.3.3",
     "fastify-static": "^4.4.2",
+    "kill-port": "^1.6.1",
+    "livereload": "^0.9.3",
     "middie": "^5.3.0"
   },
   "devDependencies": {

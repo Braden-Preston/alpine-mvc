@@ -5,7 +5,16 @@ export default (app, opts, next) ->
 
 	app.get '/', (req , res) ->
 		res.type 'text/html'
-		res.send '<h3>test</h3>'
+		res.send """
+      <html>
+        <head>
+        <link rel="stylesheet" type="text/css" href="/app.css" />
+        </head>
+        <body>
+          <h2>this is an example app</h2>
+        </body>
+      </html>
+		"""
 
 
 # module.exports = function (app, opts, next) {

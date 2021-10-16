@@ -9,7 +9,10 @@ let externals = [
 	'middie',
 	'fastify-cors',
 	'fastify-express', 
-	'fastify-static'
+	'fastify-static',
+	'connect-livereload',
+	'livereload-js',
+	'livereload'
 ]
 
 require("esbuild")
