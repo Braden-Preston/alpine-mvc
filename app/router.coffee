@@ -1,6 +1,6 @@
-
 # Top-level router
-# All Controllers are registered to paths here
+#
+# Paths are given a control to handle requests
 export default (app, opts, next) ->
 
 	app.get '/', (req , res) ->
@@ -12,7 +12,7 @@ export default (app, opts, next) ->
 #   app.get("/", async function (req, res) {
 #     console.log(Object.keys(req.id));
 #     res.type('text/html')
-#     res.send(`
+#     res.send(`d
 #       <html>
 #         <head>
 #         <link rel="stylesheet" type="text/css" href="/app.css" />

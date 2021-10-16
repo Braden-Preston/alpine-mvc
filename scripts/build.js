@@ -4,7 +4,11 @@ let useWatch = process.argv.includes("--watch");
 
 let externals = [
 	'fs',
-	'path', 
+	'cors',
+	'path',
+	'middie',
+	'fastify-cors',
+	'fastify-express', 
 	'fastify-static'
 ]
 

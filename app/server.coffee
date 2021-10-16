@@ -1,6 +1,7 @@
 # Import Modules
 fs         = require 'fs'
 path       = require 'path'
+middie     = require 'middie'
 
 # Globals
 publicPath = path.join __dirname, '..', 'public'
@@ -10,6 +11,8 @@ publicPath = path.join __dirname, '..', 'public'
 export default (app, opts) ->
 
   # Register Middleware
+  await app.register require 'middie'
+  app.use require('cors')()
 
   # Register Plugins
   app.register require('fastify-static'), {
