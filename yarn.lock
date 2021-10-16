@@ -120,13 +120,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "alpine-mvc@workspace:."
   dependencies:
+    coffeescript: ^2.6.1
     esbuild: ^0.13.7
+    esbuild-coffeescript: ^1.0.0
     fastify: ^3.22.0
     fastify-cli: ^2.13.0
     fastify-cors: ^6.0.2
     fastify-static: ^4.4.2
     middie: ^5.3.0
     npm-run-all: ^4.1.5
+    prettier: ^2.4.1
   languageName: unknown
   linkType: soft
 
@@ -485,6 +488,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"coffeescript@npm:^2.5.1, coffeescript@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "coffeescript@npm:2.6.1"
+  bin:
+    cake: bin/cake
+    coffee: bin/coffee
+  checksum: c53db08b1baa7405b6c549fad5c28dd88eeb5f04c98a1eb495788205f1785789c4af22cb65343047f8b717f53b88293047450708cb92d4ea3b58d0cec0df7338
+  languageName: node
+  linkType: hard
+
 "color-convert@npm:^1.9.0":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
@@ -784,6 +797,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esbuild-coffeescript@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "esbuild-coffeescript@npm:1.0.0"
+  dependencies:
+    coffeescript: ^2.5.1
+    esbuild: ^0.11.16
+  checksum: 1f40ee882d0821d6c2fb41570e3bde699b7abdbd1269f2ba40761f302395d1d6a93cc6e13bbe27693a6865b7e2a8427594e23a9658b43d77ed2c723812b3b425
+  languageName: node
+  linkType: hard
+
 "esbuild-darwin-64@npm:0.13.7":
   version: 0.13.7
   resolution: "esbuild-darwin-64@npm:0.13.7"
@@ -893,6 +916,15 @@ __metadata:
   version: 0.13.7
   resolution: "esbuild-windows-arm64@npm:0.13.7"
   checksum: 25ef3ccbde0f8853f8d7023ec2c426d4af3cf64a3f97f052cc35facb81b58eabeb9bb3cbb88dd84a4c9013ecb38b0ddbe9a01a355997f2466b58f6d73759d524
+  languageName: node
+  linkType: hard
+
+"esbuild@npm:^0.11.16":
+  version: 0.11.23
+  resolution: "esbuild@npm:0.11.23"
+  bin:
+    esbuild: bin/esbuild
+  checksum: d55bea84f94e7854fa6fb013ffc63747f2286001b3d73c2a7beb605e6e4847c24ff2cde0660f03045d06d083695c8082423b007a9ee8687e70b52719458bfdd6
   languageName: node
   linkType: hard
 
@@ -2470,6 +2502,15 @@ fsevents@~2.3.2:
   version: 1.0.4
   resolution: "prettier-bytes@npm:1.0.4"
   checksum: 001eb6393092cfd4d9169a6c9a5799a8dc38c6f72a3cac8af434618df3beed40b57071f6f134a6e811a301384832c306fffe1287014201de490d9bc1ddc7e0aa
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "prettier@npm:2.4.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: cc6830588b401b0d742862fe9c46bc9118204fb307c3abe0e49e95b35ed23629573807ffdf9cdd65289c252a0bb51fc0171437f6626ee36378dea80f0ee80b91
   languageName: node
   linkType: hard
 

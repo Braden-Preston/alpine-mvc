@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "run-p 'dev:*'",
     "dev:server": "fastify start -w -l info -P build",
-    "dev:bundle": "esbuild app/index.js --bundle --platform=node --watch --outdir=build",
+    "dev:bundle": "node scripts/build --watch",
     "start": "fastify start -l info app"
   },
   "dependencies": {
@@ -16,8 +16,11 @@
     "middie": "^5.3.0"
   },
   "devDependencies": {
+    "coffeescript": "^2.6.1",
     "esbuild": "^0.13.7",
+    "esbuild-coffeescript": "^1.0.0",
     "fastify-cli": "^2.13.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1"
   }
 }
