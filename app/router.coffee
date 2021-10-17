@@ -10,3 +10,5 @@ export default (app, opts, next) ->
   app.register customer, { prefix: '/customers' }
 
   next()
+
+  

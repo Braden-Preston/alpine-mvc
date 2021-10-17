@@ -26,6 +26,8 @@ startReloading()
 
 # Fastify Main App Entry 
 export default (app, opts) ->
+  # Start the database
+  await app.register require './db.coffee'
 
   # Register Middleware
   await app.register require 'middie'
