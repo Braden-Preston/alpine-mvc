@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "GPL-2.0-only",
   "scripts": {
-    "dev": "run-p 'dev:*'",
-    "dev:server": "fastify start -w --ignore-watch='src public' -l info -P build",
-    "dev:bundle": "node scripts/build --watch",
-    "start": "fastify start -l info app"
+    "dev": "nodemon",
+    "start": "gulp start",
+    "clean": "gulp clean",
+    "watch": "node scripts/build -w"
   },
   "dependencies": {
     "connect-livereload": "^0.6.1",
@@ -25,11 +25,14 @@
     "sequelize": "^6.7.0"
   },
   "devDependencies": {
+    "chalk": "^4.1.2",
     "coffeescript": "^2.6.1",
     "esbuild": "^0.13.7",
     "esbuild-coffeescript": "^1.0.0",
     "fastify-cli": "^2.13.0",
-    "npm-run-all": "^4.1.5",
+    "fs-extra": "^10.0.0",
+    "gulp": "^4.0.2",
+    "nodemon": "^2.0.13",
     "prettier": "^2.4.1"
   }
 }

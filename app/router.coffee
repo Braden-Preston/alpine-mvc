@@ -1,14 +1,14 @@
-root     = require('./controllers/root.coffee')
-customer = require('./controllers/customer.coffee')
+root     = require('./routes/root')
+customer = require('./routes/customer')
 
 # Top-level router
 #
 # Paths are given a controller collection to handle requests
-export default (app, opts, next) ->
+export default (app, opts, done) ->
 
   app.register root, { prefix: '/'}
   app.register customer, { prefix: '/customers' }
 
-  next()
+  done()
 
   

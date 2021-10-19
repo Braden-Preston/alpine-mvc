@@ -1,5 +1,6 @@
 plugin        = require('fastify-plugin')
-{ Sequelize } = require('sequelize')
+{ Sequelize, DataTypes } = require('sequelize')
+
 
 # Registers the database
 export default plugin (app, opts, next) ->
@@ -15,8 +16,29 @@ export default plugin (app, opts, next) ->
   catch err
     console.error "Could not authenticate with database, #{DB_NAME}"
 
+  User = db.define('User', {
+    firstName: {
+      type: DataTypes.STRING,
+    },
+    initial: {
+      type: DataTypes.CHAR,
+    }
+    lastName: {
+      type: DataTypes.STRING,
+    }
+  }, {
+    tableName: 'users'
+  })
+
+  console.log User
+  console.log db.models
+
   await db.sync({ alter: true })  
    
+  await User.create({ firstName: 'John', lastName: 'Due'})  
+
+  console.log 'done'
+
   # Globally provide the database
   app.decorate 'db', db
 
