@@ -1,5 +1,5 @@
-root     = require('./routes/root')
-customer = require('./routes/customer')
+root     = require('./root')
+customer = require('./customer')
 
 # Top-level router
 #

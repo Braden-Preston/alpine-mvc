@@ -4,5 +4,40 @@
   "jsxSingleQuote": true,
   "bracketSpacing": true,
   "trailingComma": "none",
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "pugPrintWidth": 80,
+  "pugTabWidth": 2,
+  "pugUseTabs": false,
+  "pugClassNotation": "as-is",
+  "pugEmptyAttributes": "none",
+  "pugAttributeSeparator": "as-needed",
+  "pugClosingBracketPosition": "new-line",
+  "pugWrapAttributesThreshold": 3,
+  "pugSortAttributesBeginning": [
+    "v-cloak",
+    "v-data",
+    "v-spread",
+    "v-bind",
+    "v-init",
+    "v-ref",
+    "v-on",
+    "class",
+    "v-transition",
+    "v-show",
+    "v-model",
+    "v-router",
+    "v-route",
+    "v-handler",
+    "v-view"
+  ],
+  "pugSortAttributesEnd": [
+    "v-text",
+    "v-html",
+    "v-unsafe-html",
+    "v-if",
+    "v-for",
+    "@",
+    ":",
+    ""
+  ]
 }

@@ -3,28 +3,11 @@ fs         = require 'fs'
 path       = require 'path'
 chalk      = require 'chalk'
 middie     = require 'middie'
-# killport   = require 'kill-port'
-livereload = require 'livereload'
+killport   = require 'kill-port'
 
 # Globals
-serverPath = path.join __dirname, '../.server'
-publicPath = path.join __dirname, '../.server/public'
-
-
-startReloading = () -> 
-  # Instantly reload CSS & JS
-  hmr = livereload.createServer()
-  hmr.watch(path.join(__dirname, '../.server'))
-
-
-  # Reload browser on server change
-  hmr.server.once("connection", () ->
-    setTimeout(() -> 
-      hmr.refresh("/")
-    , 100)
-  )
-
-startReloading()
+serverPath = path.join __dirname, '../.app'
+publicPath = path.join __dirname, '../.app/public'
 
 
 # Fastify Main App Entry 
@@ -33,20 +16,27 @@ export default (app, opts, done) ->
   # await app.register require './db'
 
   # Register Middleware
-  await app.register require 'fastify-express'
+  await app.register require 'middie'
   app.use require('connect-livereload')()
   app.use require('cors')()
 
-  # Register Plugins
+  # Server static assets and bundles
   app.register require('fastify-static'), {
-    root: publicPath
+    root: path.join __dirname, 'public'
+    prefix: '/'
+  }
+  app.register require('fastify-static'), {
+    root: path.join __dirname, 'dist'
+    decorateReply: false
     prefix: '/dist/'
   }
 
+  # Register pug template engine
+  app.register require('point-of-view'), {
+    root: path.join __dirname, 'views'
+    engine:
+      pug: require 'pug'
+  }
+
   # Assign all Routes
-  app.register require './router'
-
-  console.log 'nodes'
-
-  # Start Message
-  console.log chalk.green 'Server is live @ http://localhost:3000'
+  app.register require './routes'

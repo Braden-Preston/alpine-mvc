@@ -1,5 +1,0 @@
-{
-  "exec": "fastify start -l info -P .server/index.js",
-  "watch": [".server/index.js"],
-  "quiet": true
-}
