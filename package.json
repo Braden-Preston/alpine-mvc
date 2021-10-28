@@ -30,14 +30,18 @@
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.7",
+    "asset": "^0.4.13",
     "autoprefixer": "^10.3.7",
     "coffeescript": "^2.6.1",
+    "dotenv": "^10.0.0",
     "esbuild": "^0.13.8",
     "esbuild-coffeescript": "^1.0.0",
-    "fastify-cli": "^2.13.0",
     "fs-extra": "^10.0.0",
+    "pino-colada": "^2.2.0",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
+    "pump": "^3.0.0",
+    "split2": "^4.1.0",
     "tailwindcss": "^2.2.17"
   }
 }
